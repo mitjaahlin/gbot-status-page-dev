@@ -92,7 +92,7 @@ To enable telegram notifications, you'll need to take a few additional steps.
 3. Send a message to the bot from the telegram account which should receive the alerts (Something more than `/start`)
 4. Get the chat id with `curl https://api.telegram.org/bot<YOUR TELEGRAM API TOKEN>/getUpdates | jq '.result[0] .message .chat .id'`
 5. Set the retrieved chat id in the `SECRET_TELEGRAM_CHAT_ID` secret variable
-6. Redeploy the status page using the github action
+6. Redeploy the status page using the github action 
 
 ### Deploy on your own
 
