@@ -1,6 +1,6 @@
 settings:
   title: 'GBot Status Page'
-  url: 'https://status.gbot.tech' # used for Telegram etc. messages
+  url: 'https://statusdev.gbot.tech' # used for Telegram etc. messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -16,25 +16,25 @@ settings:
 
 monitors:
   - id: gbot-tech # unique identifier
-    name: GBot homepage
-    url: 'https://gbot.tech/' # URL to fetch
+    name: GBot DEV homepage
+    url: 'https://dev.gbot.tech/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
   - id: app-gbot-tech
-    name: GBot user portal
-    description: 'GBot internal portal.'
-    url: 'https://app.gbot.tech'
+    name: GBot DEV user portal
+    description: 'GBot internal portal DEV.'
+    url: 'https://appdev.gbot.tech'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
   - id: api-gbot-tech
-    name: GBot services
-    description: 'GBot API services.'
-    url: 'https://gbot.tech/health'
+    name: GBot DEV services
+    description: 'GBot API DEV services.'
+    url: 'https://dev.gbot.tech/health'
     method: GET
     expectStatus: 200
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
