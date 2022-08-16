@@ -15,7 +15,7 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: gbot-tech # unique identifier
+  - id: dev-gbot-tech # unique identifier
     name: GBot DEV homepage
     url: 'https://dev.gbot.tech/' # URL to fetch
     method: GET # default=GET
@@ -23,7 +23,7 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: app-gbot-tech
+  - id: appdev-gbot-tech
     name: GBot DEV user portal
     description: 'GBot internal portal DEV.'
     url: 'https://appdev.gbot.tech'
@@ -31,7 +31,7 @@ monitors:
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: api-gbot-tech
+  - id: dev-api-gbot-tech
     name: GBot DEV services
     description: 'GBot API DEV services.'
     url: 'https://dev.gbot.tech/health'
