@@ -5,8 +5,8 @@ const kvDataKey = 'monitors_data_v1_1'
 
 export async function getKVMonitors() {
   // trying both to see performance difference
-  return KV_STATUS_PAGE.get(kvDataKey, 'json')
-  //return JSON.parse(await KV_STATUS_PAGE.get(kvDataKey, 'text'))
+  return KV_STATUS_PAGE_DEV.get(kvDataKey, 'json')
+  //return JSON.parse(await KV_STATUS_PAGE_DEV.get(kvDataKey, 'text'))
 }
 
 export async function setKVMonitors(data) {
@@ -20,7 +20,7 @@ const getOperationalLabel = (operational) => {
 }
 
 export async function setKV(key, value, metadata, expirationTtl) {
-  return KV_STATUS_PAGE.put(key, value, { metadata, expirationTtl })
+  return KV_STATUS_PAGE_DEV.put(key, value, { metadata, expirationTtl })
 }
 
 export async function notifySlack(monitor, operational) {
